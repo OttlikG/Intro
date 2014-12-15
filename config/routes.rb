@@ -2,7 +2,7 @@ Intro::Application.routes.draw do
 
   get "dashboard/index"
 
-  resources :players
+  resources :players, :levels
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

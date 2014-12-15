@@ -20,6 +20,7 @@ class PlayersController < ApplicationController
 
   def new
     @player = Player.new
+    @levels = Level.all
 
     respond_to do |format|
       format.html # new.html.erb

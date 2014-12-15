@@ -1,0 +1,22 @@
+
+<%= form_for @level do |level_form| %>
+    <% if @level.errors.any? %>
+        <div id="errorExplanation">
+          <h2><%= pluralize(@level.errors.count, "error") %> prohibited this player from being saved:</h2>
+          <ul>
+            <% @level.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= level_form.label :name %><br />
+      <%= level_form.text_field :name %>
+    </div>
+
+    <div class="actions">
+      <%= level_form.submit %>
+    </div>
+<% end %>
